@@ -43,7 +43,7 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
         name: junit-results
-        path: test-results.xml
+        path: /junit/test-results.xml
 
     # Paso 6: #Upload junit test-results.xml to GitHub Actions (opcional)
     - name: Upload pytest results as JUnit XML
