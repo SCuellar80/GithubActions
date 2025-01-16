@@ -40,7 +40,7 @@ jobs:
         pytest PytestDir/parametrized.py --doctest-modules --junitxml=junit/test-results.xml --cov=com --cov-report=xml --cov-report=html
     # Paso 5: Publicar los resultados de pytest como un archivo de artefacto
     - name: Upload pytest results
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v3
       with:
         name: junit-results
         path: test-results.xml
@@ -51,7 +51,7 @@ jobs:
         pytest --maxfail=1 --disable-warnings --junitxml=test-results.xml
         
     - name: Upload JUnit XML result
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v3
       with:
         name: junit-results
         path: test-results.xml
